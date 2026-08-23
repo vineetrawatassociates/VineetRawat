@@ -770,6 +770,146 @@
   }
   .footer-bottom a { color: var(--gold-light); text-decoration: none; }
 
+  /* INFORMATION / UPDATES */
+  .information { background: var(--white); }
+  .info-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 56px;
+    align-items: start;
+  }
+  .info-col { min-width: 0; }
+  .info-article {
+    font-size: 16px;
+    color: var(--text-mid);
+    line-height: 1.85;
+  }
+  .info-article h3 {
+    font-family: var(--ff-serif);
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 14px;
+    line-height: 1.35;
+  }
+  .info-article h4 {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--navy);
+    margin: 24px 0 10px;
+  }
+  .info-article p { margin-bottom: 16px; }
+  .info-article ul {
+    list-style: none;
+    margin: 0 0 20px;
+  }
+  .info-article ul li {
+    padding: 6px 0 6px 22px;
+    position: relative;
+    font-size: 15px;
+  }
+  .info-article ul li::before {
+    content: '›';
+    position: absolute;
+    left: 4px;
+    color: var(--gold);
+    font-weight: 700;
+  }
+  .info-meta {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+    font-size: 12px;
+    color: var(--text-muted);
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--border-light);
+    margin-bottom: 22px;
+  }
+  .info-meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  /* Document download card */
+  .doc-card {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--gold-pale);
+    padding: 26px 28px;
+    margin-top: 32px;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    flex-wrap: wrap;
+  }
+  .doc-icon {
+    width: 58px;
+    height: 58px;
+    flex-shrink: 0;
+    background: var(--navy);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold-light);
+  }
+  .doc-icon svg { width: 28px; height: 28px; stroke: var(--gold-light); fill: none; stroke-width: 1.5; }
+  .doc-info { flex: 1; min-width: 200px; }
+  .doc-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 4px;
+  }
+  .doc-meta {
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+  .doc-download {
+    background: var(--gold);
+    color: var(--navy);
+    font-weight: 600;
+    font-size: 14px;
+    padding: 12px 24px;
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: background 0.2s, transform 0.15s;
+    white-space: nowrap;
+  }
+  .doc-download:hover { background: var(--gold-light); transform: translateY(-1px); }
+  .doc-download svg { width: 16px; height: 16px; stroke: var(--navy); fill: none; stroke-width: 2; }
+
+  /* LinkedIn embed */
+  .linkedin-embed {
+    background: var(--cream);
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+  .linkedin-embed-head {
+    align-self: flex-start;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 600;
+  }
+  .linkedin-embed iframe {
+    width: 100%;
+    max-width: 504px;
+    height: 922px;
+    border: none;
+    border-radius: 6px;
+  }
+
   /* Responsive */
   @media (max-width: 960px) {
     .hero-inner { grid-template-columns: 1fr; gap: 48px; }
@@ -777,6 +917,7 @@
     .about-grid { grid-template-columns: 1fr; gap: 40px; }
     .jur-grid { grid-template-columns: repeat(3, 1fr); }
     .process-steps { grid-template-columns: 1fr; }
+    .info-grid { grid-template-columns: 1fr; }
     .footer-grid { grid-template-columns: 1fr 1fr; }
     .nav-links { display: none; }
   }
@@ -802,6 +943,7 @@
     <li><a href="#services">Services</a></li>
     <li><a href="#jurisdictions">Jurisdictions</a></li>
     <li><a href="#process">How We Work</a></li>
+    <li><a href="#updates">Updates</a></li>
     <li><a href="#contact" class="nav-cta">Get in Touch</a></li>
   </ul>
 </nav>
@@ -1361,6 +1503,61 @@
         <div class="step-num">03</div>
         <div class="step-title">Value Amplification</div>
         <p class="step-desc">Our philosophy is to always deliver beyond the mandate. We look past the immediate paperwork to find strategic tax efficiencies, operational improvements and growth opportunities — ensuring you have a trusted ally at every stage of your business journey.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INFORMATION / UPDATES -->
+<section class="information" id="updates">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-eyebrow">News & Resources</div>
+      <h2 class="section-title">Latest Updates & Information Centre</h2>
+      <p class="section-subtitle">Stay informed with our latest announcements, insights, and downloadable resources.</p>
+    </div>
+    <div class="info-grid">
+      <div class="info-col">
+        <div class="info-article">
+          <div class="info-meta">
+            <span>📅 23 August 2026</span>
+            <span>🏢 Vineet Rawat & Associates</span>
+            <span>📍 New Delhi, India</span>
+          </div>
+          <h3>Firm Update & Notice to Clients</h3>
+          <p>We are pleased to share the latest developments at <strong>Vineet Rawat & Associates</strong>. Our team continues to expand its cross-border service capabilities, and we remain fully committed to supporting businesses across the UK, UAE, Australia, USA, and Europe with expert accounting, tax, and compliance solutions.</p>
+          <h4>Key Highlights</h4>
+          <ul>
+            <li>Enhanced Virtual CFO and outsourced accounting offerings for international clients.</li>
+            <li>Updated guidance on UAE Corporate Tax (9%) and UK Making Tax Digital (MTD) compliance.</li>
+            <li>Dedicated support for India Entry Advisory, FDI, and FEMA/RBI compliance.</li>
+            <li>Cloud-native operations on QuickBooks, Xero, and Zoho Books.</li>
+          </ul>
+          <p>For any questions regarding your compliance obligations or to discuss how we can support your business, please reach out using the contact details below. Relevant documents and circulars will be published in this section as they become available.</p>
+        </div>
+
+        <!-- Downloadable document.
+             To publish a PDF, place the file inside the "documents" folder and
+             update the href below, e.g. href="documents/your-file.pdf" -->
+        <div class="doc-card">
+          <div class="doc-icon">
+            <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+          </div>
+          <div class="doc-info">
+            <div class="doc-title">Firm Update & Information Circular</div>
+            <div class="doc-meta">PDF · Updated 23 August 2026</div>
+          </div>
+          <a class="doc-download" href="documents/firm-update.pdf" download>
+            <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download PDF
+          </a>
+        </div>
+      </div>
+      <div class="info-col">
+        <div class="linkedin-embed">
+          <div class="linkedin-embed-head">Follow Our Latest Post</div>
+          <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7490832848799551488" height="922" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+        </div>
       </div>
     </div>
   </div>
